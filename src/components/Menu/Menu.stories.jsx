@@ -20,3 +20,9 @@ export const InterfaceVisible = Template.bind({});
 InterfaceVisible.args = {
     interfaceVisible: true
 }
+
+export const BlackNWhite = Template.bind({});
+BlackNWhite.args = {
+    primaryColor:"#222222",
+    secondaryColor:"#f6f6f6",
+}

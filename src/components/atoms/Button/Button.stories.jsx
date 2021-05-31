@@ -18,6 +18,12 @@ Default.args = {
     label: 'Button',
 };
 
+export const NotPrimary = Template.bind({});
+NotPrimary.args = {
+    label: "Button",
+    isPrimary: false
+}
+
 export const Large = Template.bind({});
 Large.args = {
     size: 'large',

@@ -12,6 +12,7 @@ export const MenuButton = ({position, bottom, left, color, backgroundColor, onCl
             }}
         >
             <Button
+                isPrimary={true}
                 label={"Interact"}
                 size={"large"}
                 color={color}

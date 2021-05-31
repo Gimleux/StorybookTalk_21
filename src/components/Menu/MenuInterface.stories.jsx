@@ -18,6 +18,5 @@ Default.args = {}
 
 export const Small = Template.bind({});
 Small.args = {
-    minHeight: "150px",
-    width: "30%",
+    width: "260px",
 }

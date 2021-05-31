@@ -14,12 +14,13 @@ export const Menu = (props) => {
             />
             <MenuInterface
                 visible={interfaceIsVisible}
-                width="25%"
+                width="260px"
                 position="absolute"
                 bottom="32px"
                 left="125px"
                 labelColor={props.secondaryColor}
                 backgroundColor={props.primaryColor}
+                setNewQuote={props.setNewQuote}
             />
         </>
     )
@@ -37,11 +38,16 @@ Menu.propTypes = {
     /**
      * Shall the interface be visible?
      */
-    interfaceVisible: PropTypes.bool
+    interfaceVisible: PropTypes.bool,
+    /**
+     * New Quote Function
+     */
+    setNewQuote: PropTypes.func,
 }
 
 Menu.defaultProps = {
     primaryColor: "#00A82D",
     secondaryColor: "#f6f6f6",
-    interfaceVisible: false
+    interfaceVisible: false,
+    setNewQuote: undefined
 }

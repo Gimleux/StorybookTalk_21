@@ -1,11 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import PropTypes, {string} from "prop-types";
 import "./menuInterface.css"
 import {InputForm} from "../atoms/InputForm/InputForm";
+import {ReloadButton} from "./ReloadButton";
 
-export default function MenuInterface(props)  {
+export default function MenuInterface(props) {
     if (!props.visible) return <></>
-    return(
+    return (
         <div
             className="menuInterface"
             style={{
@@ -17,16 +18,19 @@ export default function MenuInterface(props)  {
                 left: props.left
             }}
         >
-            <div>
-                <InputForm
-                    label="Please enter your TheOneRing-API-Key:"
-                    labelColor={props.labelColor}
-                    buttonBackgroundColor={props.labelColor}
-                    buttonLabelColor={props.backgroundColor}
-                    inputID={"input-api"}
-                    onClick={() => console.log("API: " + document.getElementById("input-api").innerText)}
-                />
-            </div>
+            <ReloadButton
+                onClick={props.setNewQuote}
+                backgroundColor={props.labelColor}
+                color={props.backgroundColor}
+            />
+            <InputForm
+                label="Please enter your TheOneRing-API-Key:"
+                labelColor={props.labelColor}
+                buttonBackgroundColor={props.labelColor}
+                buttonLabelColor={props.backgroundColor}
+                inputID={"input-api"}
+                onClick={() => alert("Submitted API Key")}
+            />
         </div>
     )
 }
@@ -63,7 +67,11 @@ MenuInterface.propTypes = {
     /**
      * How far shall the Button's position differ from the left page side?
      */
-    left: string
+    left: string,
+    /**
+     * New Quote Function
+     */
+    setNewQuote: PropTypes.func,
 }
 
 MenuInterface.defaultProps = {
@@ -74,5 +82,6 @@ MenuInterface.defaultProps = {
     width: null,
     position: "relative",
     bottom: null,
-    left: null
+    left: null,
+    setNewQuote: undefined
 }

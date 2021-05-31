@@ -1,11 +1,18 @@
 .atom-button {
+    color: #f6f6f6;
     border: 0;
     border-radius: 3em;
     cursor: pointer;
     display: inline-block;
     line-height: 1;
-    color: #f6f6f6;
+}
+
+.atom-button--primary {
     background-color: #00A82D;
+}
+.atom-button--secondary {
+    background-color: transparent;
+    box-shadow: rgba(255, 255, 255, 0.50) 0 0 0 1px inset;
 }
 
 .atom-button--small {
