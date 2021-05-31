@@ -19,7 +19,7 @@ const CenteredTemplate = (args) => (
     <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center"}}>
         <Quote {...args} />
     </div>
-)
+);
 
 export const Centered = CenteredTemplate.bind({});
 Centered.args = {
