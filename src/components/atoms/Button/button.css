@@ -1,0 +1,22 @@
+.atom-button {
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1;
+    color: #f6f6f6;
+    background-color: #00A82D;
+}
+
+.atom-button--small {
+    font-size: 12px;
+    padding: 10px 16px;
+}
+.atom-button--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+}
+.atom-button--large {
+    font-size: 16px;
+    padding: 12px 24px;
+}

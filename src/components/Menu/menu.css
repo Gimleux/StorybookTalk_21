@@ -1,0 +1,6 @@
+.menu {
+    opacity: .95;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+}
