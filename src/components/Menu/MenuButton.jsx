@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes, {string} from "prop-types";
 import {Button} from "../atoms/Button/Button";
+import Menu from "./Menu";
 
 export const MenuButton = ({
                                position,
@@ -21,6 +22,7 @@ export const MenuButton = ({
                 size={"large"}
                 {...props}
             />
+            <Menu/>
         </div>
     )
 }

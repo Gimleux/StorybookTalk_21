@@ -47,8 +47,8 @@ Menu.propTypes = {
 }
 
 Menu.defaultProps = {
-    labelColor: null,
-    backgroundColor: null,
+    labelColor: "#f6f6f6",
+    backgroundColor: "#00A82D",
     minHeight: null,
     width: null
 }

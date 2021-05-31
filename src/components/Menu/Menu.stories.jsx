@@ -14,15 +14,10 @@ export default {
 const Template = (args) => <Menu {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-    labelColor: "#f6f6f6",
-    backgroundColor: "#00A82D"
-}
+Default.args = {}
 
 export const Small = Template.bind({});
 Small.args = {
     minHeight: "150px",
     width: "30%",
-    labelColor: "#f6f6f6",
-    backgroundColor: "#00A82D"
 }
