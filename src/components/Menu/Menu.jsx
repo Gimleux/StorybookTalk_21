@@ -1,54 +1,47 @@
-import React from "react";
+import React, {useState} from "react";
+import {MenuButton} from "./MenuButton";
+import MenuInterface from "./MenuInterface";
 import PropTypes from "prop-types";
-import "./menu.css"
-import {InputForm} from "../atoms/InputForm/InputForm";
 
-export default function Menu(props)  {
-    return(
-        <div
-            className="menu"
-            style={{
-                backgroundColor: props.backgroundColor,
-                minHeight: props.minHeight,
-                width: props.width
-            }}
-        >
-            <div>
-                <InputForm
-                    label="Please enter your TheOneRing-API-Key:"
-                    labelColor={props.labelColor}
-                    buttonBackgroundColor={props.labelColor}
-                    buttonLabelColor={props.backgroundColor}
-                    inputID={"input-api"}
-                    onClick={() => console.log("API: " + document.getElementById("input-api").innerText)}
-                />
-            </div>
-        </div>
+export const Menu = (props) => {
+    const [interfaceIsVisible, setInterfaceIsVisible] = useState(props.interfaceVisible)
+    return (
+        <>
+            <MenuButton
+                color={props.secondaryColor}
+                backgroundColor={props.primaryColor}
+                onClick={() => setInterfaceIsVisible(!interfaceIsVisible)}
+            />
+            <MenuInterface
+                visible={interfaceIsVisible}
+                width="25%"
+                position="absolute"
+                bottom="32px"
+                left="125px"
+                labelColor={props.secondaryColor}
+                backgroundColor={props.primaryColor}
+            />
+        </>
     )
 }
 
 Menu.propTypes = {
     /**
-     * What label color to use
+     * What primary color to use
      */
-    labelColor: PropTypes.string,
+    primaryColor: PropTypes.string,
     /**
-     * What background color to use
+     * What secondary color to use
      */
-    backgroundColor: PropTypes.string,
+    secondaryColor: PropTypes.string,
     /**
-     * What height should the menu box at least have?
+     * Shall the interface be visible?
      */
-    minHeight: PropTypes.string,
-    /**
-     * What width should the menu box at have?
-     */
-    width: PropTypes.string,
+    interfaceVisible: PropTypes.bool
 }
 
 Menu.defaultProps = {
-    labelColor: "#f6f6f6",
-    backgroundColor: "#00A82D",
-    minHeight: null,
-    width: null
+    primaryColor: "#00A82D",
+    secondaryColor: "#f6f6f6",
+    interfaceVisible: false
 }

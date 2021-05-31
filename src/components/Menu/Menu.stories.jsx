@@ -1,14 +1,14 @@
 import React from "react";
 
-import Menu from "./Menu";
+import {Menu} from "./Menu";
 
 export default {
-    title: "Menu/Menu",
+    title: 'Menu/Menu',
     component: Menu,
     argTypes: {
-        labelColor: {control: "color"},
-        backgroundColor: {control: "color"}
-    }
+        primaryColor: {control: "color"},
+        secondaryColor: {control: 'color'},
+    },
 };
 
 const Template = (args) => <Menu {...args} />;
@@ -16,8 +16,7 @@ const Template = (args) => <Menu {...args} />;
 export const Default = Template.bind({});
 Default.args = {}
 
-export const Small = Template.bind({});
-Small.args = {
-    minHeight: "150px",
-    width: "30%",
+export const InterfaceVisible = Template.bind({});
+InterfaceVisible.args = {
+    interfaceVisible: true
 }
