@@ -69,7 +69,7 @@ MenuInterface.propTypes = {
     /**
      * New Quote Function
      */
-    setNewQuote: PropTypes.func,
+    setNewQuote: PropTypes.func.isRequired,
 }
 
 MenuInterface.defaultProps = {
@@ -81,5 +81,4 @@ MenuInterface.defaultProps = {
     position: "relative",
     bottom: null,
     left: null,
-    setNewQuote: undefined
 }

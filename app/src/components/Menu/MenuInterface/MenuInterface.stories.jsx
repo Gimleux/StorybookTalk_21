@@ -1,13 +1,15 @@
 import React from "react";
 
-import MenuInterface from "./MenuInterface";
+import {MenuInterface} from "./MenuInterface";
+import {action} from "@storybook/addon-actions";
 
 export default {
     title: "Menu/MenuInterface",
     component: MenuInterface,
     argTypes: {
         labelColor: {control: "color"},
-        backgroundColor: {control: "color"}
+        backgroundColor: {control: "color"},
+        setNewQuote: {action: "clicked"}
     }
 };
 
@@ -19,4 +21,7 @@ Default.args = {}
 export const Small = Template.bind({});
 Small.args = {
     width: "260px",
+    minHeight: "20px",
+    bottom: "0",
+    left: "0",
 }
