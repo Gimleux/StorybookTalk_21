@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import {Quote} from "./Quote/Quote";
 import {getCharacter, getQuote} from "../background/api/quote";
-import {Menu} from "./Menu/Menu";
 
 const App = () => {
     const [quote, setQuote] = useState()
@@ -24,11 +23,6 @@ const App = () => {
             <Quote
                 quote={quote}
                 cite={character}
-            />
-            <Menu
-                setNewQuote={setNewQuote}
-                primaryColor={"#222222"}
-                secondaryColor={"#f6f6f6"}
             />
         </div>
 
