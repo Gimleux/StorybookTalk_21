@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import {MenuButton} from "./MenuButton";
-import MenuInterface from "./MenuInterface";
+import {MenuButton} from "./MenuButton/MenuButton";
+import MenuInterface from "./MenuInterface/MenuInterface";
 import PropTypes from "prop-types";
 
 export const Menu = (props) => {
@@ -15,12 +15,14 @@ export const Menu = (props) => {
             <MenuInterface
                 visible={interfaceIsVisible}
                 width="260px"
-                position="absolute"
-                bottom="32px"
-                left="125px"
                 labelColor={props.secondaryColor}
                 backgroundColor={props.primaryColor}
                 setNewQuote={props.setNewQuote}
+                style={{
+                    position:"absolute",
+                    bottom:"32px",
+                    left:"125px"
+                }}
             />
         </>
     )

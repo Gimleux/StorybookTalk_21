@@ -1,5 +1,5 @@
 import React from "react";
-import {Button} from "../atoms/Button/Button";
+import {Button} from "../../atoms/Button/Button";
 import PropTypes from "prop-types";
 
 export const ReloadButton = (props) => {

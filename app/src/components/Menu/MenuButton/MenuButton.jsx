@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes, {string} from "prop-types";
-import {Button} from "../atoms/Button/Button";
+import {Button} from "../../atoms/Button/Button";
 
 export const MenuButton = ({position, bottom, left, color, backgroundColor, onClick, ...props}) => {
     return (

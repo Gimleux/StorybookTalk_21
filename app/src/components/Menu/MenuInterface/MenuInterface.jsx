@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes, {string} from "prop-types";
 import "./menuInterface.css"
-import {InputForm} from "../atoms/InputForm/InputForm";
-import {ReloadButton} from "./ReloadButton";
+import {InputForm} from "../../atoms/InputForm/InputForm";
+import {ReloadButton} from "../ReloadButton/ReloadButton";
 
 export default function MenuInterface(props) {
     if (!props.visible) return <></>
@@ -13,9 +13,7 @@ export default function MenuInterface(props) {
                 backgroundColor: props.backgroundColor,
                 minHeight: props.minHeight,
                 width: props.width,
-                position: props.position,
-                bottom: props.bottom,
-                left: props.left
+                ...props?.style
             }}
         >
             <ReloadButton

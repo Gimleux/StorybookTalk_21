@@ -2,16 +2,17 @@ import React from "react";
 import PropTypes from "prop-types";
 import './button.css';
 
-export const Button = ({size, color, backgroundColor, onClick, label, primary, ...buttonProps}) => {
+export const Button = ({size, color, backgroundColor, onClick, label, primary, ...props}) => {
     const mode = primary ? 'atom-button--primary' : 'atom-button--secondary';
     return (
         <button
             type="button"
             className={['atom-button', `atom-button--${size}`, mode].join(' ')}
+            {...props}
             style={{
                 color: color,
                 backgroundColor: backgroundColor,
-                ...buttonProps?.style
+                ...props?.style
             }}
             onClick={onClick}
         >
