@@ -7,7 +7,6 @@ const App = () => {
     const [character, setCharacter] = useState();
 
     const setNewQuote = async () => {
-        console.log("Hello")
         const quote = await getQuote();
         setQuote(quote.dialog);
         const character = await getCharacter(quote);
