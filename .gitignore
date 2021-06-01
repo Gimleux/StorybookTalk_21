@@ -255,5 +255,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # Else
-key.txt
-src/background/variables.js
+Storybook.txt
+app/src/background/variables.js
