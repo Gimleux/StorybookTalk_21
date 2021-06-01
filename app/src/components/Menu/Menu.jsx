@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {MenuButton} from "./MenuButton/MenuButton";
-import MenuInterface from "./MenuInterface/MenuInterface";
+import {MenuInterface} from "./MenuInterface/MenuInterface";
 import PropTypes from "prop-types";
 
 export const Menu = (props) => {

@@ -4,7 +4,7 @@ import "./menuInterface.css"
 import {InputForm} from "../../atoms/InputForm/InputForm";
 import {ReloadButton} from "../ReloadButton/ReloadButton";
 
-export default function MenuInterface(props) {
+export const MenuInterface = (props) => {
     if (!props.visible) return <></>
     return (
         <div
