@@ -1,7 +1,6 @@
 import React from "react";
 
 import {MenuInterface} from "./MenuInterface";
-import {action} from "@storybook/addon-actions";
 
 export default {
     title: "Menu/MenuInterface",
