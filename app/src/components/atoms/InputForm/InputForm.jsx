@@ -40,7 +40,6 @@ InputForm.propTypes = {
     /**
      * What label color to use
      */
-
     labelColor: PropTypes.string,
     /**
      * Input field ID
