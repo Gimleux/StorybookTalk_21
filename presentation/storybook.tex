@@ -38,8 +38,8 @@
 
 %------------------------------------------------
 
+\usepackage[UTF8]{inputenc}
 \usepackage{booktabs} % Required for better table rules
-
 %----------------------------------------------------------------------------------------
 %	 TITLE SLIDE
 %----------------------------------------------------------------------------------------
@@ -64,6 +64,17 @@
 
 \begin{frame}
 	\maketitle % Automatically created using the information in the commands above
+\end{frame}
+
+\begin{frame}{Inhalt}
+	\begin{itemize}
+		\item Was ist Storybook?
+		\item Was sind die Vorteile?
+		\item Logik in Storybook
+		\item (Aufbau der Web-Oberfläche)
+		\item Projektinitialisierung
+		\item Live-Coding
+	\end{itemize}
 \end{frame}
 
 %----------------------------------------------------------------------------------------
@@ -261,7 +272,36 @@
 \end{frame}
 
 %----------------------------------------------------------------------------------------
-%	 Web-Oberfläche
+%	 Hinzufügen von Tests
+%----------------------------------------------------------------------------------------
+%\section{Snapshot-Tests} % Section title slide, unnumbered
+%\begin{frame}{Snapshot-Tests}
+%	\lstset{extendedchars=false,
+%		escapeinside=”}
+%	\begin{itemize}
+%		\item Installation des entsprechenden Add-Ons
+%	\end{itemize}
+%	\begin{lstlisting}{}[language=JavaScript]
+%		npm i -D @storybook/addon-storyshots
+%	\end{lstlisting}
+%	\begin{itemize}
+%		\item Testcode in Projekt einfügen
+%	\end{itemize}
+%	\begin{lstlisting}{}[language=JavaScript]
+%		// storybook.test.js
+%		import initStoryshots from '@storybook/addon-storyshots';
+%		initStoryshots();
+%	\end{lstlisting}
+%	\begin{itemize}
+%		\item Tests ausführen
+%	\end{itemize}
+%	\begin{lstlisting}[language=JavaScript]
+%		npm test
+%	\end{lstlisting}
+%\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	 Web-Oberflaeche
 %----------------------------------------------------------------------------------------
 \section{Aufbau der Web-Oberfläche} % Section title slide, unnumbered
 
