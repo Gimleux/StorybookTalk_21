@@ -1,7 +1,11 @@
 # Talk about Storybook(.js)
 All the resources for my talk about Storybook.
 
-This repository is split in two parts: presentation and app, in which in each case the corresponding can be found.
+This repository is split in two parts: presentation and app, in which in each case the corresponding can be found.  
+
+The app is based on the [LotR API](https://github.com/gitfrosh/lotr-api/tree/release/sample-app) sample app. Using Storybook, a minimalist menu is added to it during the talk, which can be used to reload the page and store the API key (the latter, however, only the interface, without any associated logic). The state at the end of the talk can be explored via the "finished" branch.
+
+The presentation was created with LaTeX Beamer. The used theme is [Focus](https://github.com/elauksap/focus-beamertheme).
 
 ## How to run?
 Just navigate to ```app/```, install the dependencies using ```npm i``` and execute ```npm run storybook``` to start a local storybook instance for the sampler app.
