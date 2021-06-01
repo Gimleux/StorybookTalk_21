@@ -3,12 +3,9 @@ import {Button} from "../atoms/Button/Button";
 import PropTypes from "prop-types";
 
 export const ReloadButton = (props) => {
-    console.log("ReloadProps")
-    console.log(props)
     return (
         <Button
             label={"New Quote"}
-            isPrimary={true}
             color={props.color}
             backgroundColor={props.backgroundColor}
             onClick={props.onClick}

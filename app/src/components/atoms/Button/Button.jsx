@@ -2,10 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import './button.css';
 
-export const Button = ({size, color, backgroundColor, onClick, label, isPrimary, ...buttonProps}) => {
-    const mode = isPrimary ? 'atom-button--primary' : 'atom-button--secondary';
-    console.log("Button onclick:")
-    console.log(onClick)
+export const Button = ({size, color, backgroundColor, onClick, label, primary, ...buttonProps}) => {
+    const mode = primary ? 'atom-button--primary' : 'atom-button--secondary';
     return (
         <button
             type="button"
@@ -26,7 +24,7 @@ Button.propTypes = {
     /**
      * Is this the principal call to action on the page?
      */
-    isPrimary: PropTypes.bool,
+    primary: PropTypes.bool,
     /**
      * What text color to use
      */
@@ -50,7 +48,7 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-    isPrimary: true,
+    primary: true,
     color: null,
     backgroundColor: null,
     label: "Button",

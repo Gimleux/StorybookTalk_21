@@ -20,7 +20,7 @@ Default.args = {
 export const NotPrimary = Template.bind({});
 NotPrimary.args = {
     label: "Button",
-    isPrimary: false
+    primary: false
 }
 
 export const Large = Template.bind({});
